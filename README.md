@@ -35,3 +35,30 @@ An end-to-end Data Science project that predicts student performance based on st
 
 ---
 
+## 📅 Day 2: Data Cleaning, Encoding & EDA
+
+### ✅ Work Completed
+- Implemented data cleaning module
+- Handled missing values
+- Built feature encoding pipeline using one-hot encoding
+- Performed Exploratory Data Analysis (EDA)
+- Generated visual insights:
+  - Study Time vs Final Grade
+  - Absences vs Final Grade
+
+---
+
+### 📊 Key Insights
+- Higher study time generally leads to better grades
+- More absences tend to reduce performance
+
+---
+
+### 🧠 Key Learning
+- Importance of encoding categorical variables
+- Data visualization for pattern discovery
+- Building modular ML pipelines
+
+---
+
+
