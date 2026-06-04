@@ -61,4 +61,24 @@ An end-to-end Data Science project that predicts student performance based on st
 
 ---
 
+## 📅 Day 3: SQL Database Integration
+
+### ✅ Work Completed
+- Created SQLite database
+- Designed students table
+- Inserted cleaned student records
+- Retrieved data from database
+- Built reusable database module
+
+### Technologies Used
+- Python
+- SQLite
+- Pandas
+
+### Key Learning
+- Database design
+- SQL integration with Python
+- ETL workflow (CSV → SQL)
+
+
 
