@@ -1,4 +1,4 @@
-# 🎓 Student Performance Predictor
+# 🎓 AI-Powered Student Intelligence System
 
 An end-to-end Data Science project that predicts student performance based on study habits, lifestyle, and academic factors. The project will evolve into a full-stack application with ML model deployment on cloud.
 
@@ -80,5 +80,38 @@ An end-to-end Data Science project that predicts student performance based on st
 - SQL integration with Python
 - ETL workflow (CSV → SQL)
 
+---
 
+## 📅 Day 4: Machine Learning Model Training
+
+### 🎯 Objective
+Train and evaluate a machine learning model using data retrieved from the SQLite database instead of directly using CSV files.
+
+---
+
+### ✅ Work Completed
+
+#### Database-Driven Training
+- Retrieved student records from SQLite database
+- Used SQL data as the source for model training
+- Established a complete data pipeline from database to machine learning model
+
+#### Machine Learning Pipeline
+- Split data into training and testing datasets
+- Trained a Random Forest Regressor model
+- Generated predictions on test data
+- Evaluated model performance using standard metrics
+
+#### Model Persistence
+- Saved the trained model using Joblib
+- Generated a reusable `.pkl` file for future deployment
+
+---
+
+### 📁 New Files Added
+
+```text
+src/models/train_model.py
+src/models/evaluate_model.py
+models/student_model.pkl
 
