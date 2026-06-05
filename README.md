@@ -110,8 +110,62 @@ Train and evaluate a machine learning model using data retrieved from the SQLite
 
 ### 📁 New Files Added
 
-```text
 src/models/train_model.py
 src/models/evaluate_model.py
 models/student_model.pkl
+
+## 📅 Day 5: Feature Engineering & Model Comparison
+
+### 🎯 Objective
+Improve the machine learning pipeline by comparing multiple algorithms and selecting the best-performing model.
+
+---
+
+### ✅ Work Completed
+
+- Created feature engineering module
+- Prepared training and target datasets
+- Implemented train-test split
+- Trained multiple machine learning models:
+  - Linear Regression
+  - Decision Tree Regressor
+  - Random Forest Regressor
+- Compared model performance using R² Score
+- Selected the best-performing model
+- Saved the final model for deployment
+
+---
+
+### 📊 Models Compared
+
+| Model | Purpose |
+|---------|---------|
+| Linear Regression | Baseline Model |
+| Decision Tree | Non-linear Learning |
+| Random Forest | Ensemble Learning |
+
+---
+
+### 🧠 Key Learnings
+
+- Feature engineering workflows
+- Model benchmarking
+- Performance evaluation
+- Model selection strategies
+
+---
+
+### 📁 New Files Added
+
+src/features/feature_engineering.py
+
+src/models/compare_models.py
+
+src/models/train_best_model.py
+
+models/best_student_model.pkl
+
+---
+
+
 
