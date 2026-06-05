@@ -1,79 +1,93 @@
+from sklearn.model_selection import train_test_split
+import joblib
 
-from src.data.load_data import load_data
-from src.data.clean_data import clean_data
+from src.data.database import fetch_data
 
-from src.data.database import (
-    create_table,
-    insert_data,
-    fetch_data
+from src.features.feature_engineering import (
+    prepare_features
 )
 
-from src.models.train_model import train_model
-from src.models.evaluate_model import evaluate_model
+from src.models.tune_model import (
+    tune_model
+)
+
+from src.models.feature_importance import (
+    show_feature_importance
+)
 
 
 def main():
 
-    print("Starting Day 4 Pipeline...\n")
+    print("🚀 Day 6 Pipeline Started\n")
 
-    # Load Data
-    df = load_data(
-        "data/student-mat.csv"
-    )
-
-    # Clean Data
-    df, _ = clean_data(df)
-
-    # Prepare DB Data
-    df_db = df[
-        [
-            "studytime",
-            "failures",
-            "absences",
-            "G3"
-        ]
-    ]
-
-    # Create DB
-    create_table()
-
-    # Store Data
-    insert_data(df_db)
-
-    # Read Data Back
-    df_sql = fetch_data()
+    # Load data from SQL
+    df = fetch_data()
 
     print(
-        "Records Loaded From SQL:",
-        len(df_sql)
+        f"✅ Records Loaded: {len(df)}"
     )
 
-    # Train Model
-    model, X_test, y_test = train_model(
-        df_sql
+    # Feature Engineering
+    X, y = prepare_features(df)
+
+    print(
+        f"✅ Features Shape: {X.shape}"
     )
 
     print(
-        "\nModel Trained Successfully"
+        f"✅ Target Shape: {y.shape}"
     )
 
-    # Evaluate
-    mae, r2 = evaluate_model(
-        model,
-        X_test,
-        y_test
-    )
-
-    print(
-        f"\nMAE: {mae:.2f}"
+    # Train Test Split
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=0.2,
+        random_state=42
     )
 
     print(
-        f"R² Score: {r2:.2f}"
+        "\n✅ Train-Test Split Completed"
+    )
+
+    # Hyperparameter Tuning
+    best_model = tune_model(
+        X_train,
+        y_train
     )
 
     print(
-        "\nModel Saved Successfully"
+        "\n✅ Best Model Found"
+    )
+
+    print(best_model)
+
+    # Feature Importance
+    show_feature_importance(
+        best_model,
+        X_train
+    )
+
+    # Save Model
+    joblib.dump(
+        best_model,
+        "models/best_student_model.pkl"
+    )
+
+    print(
+        "\n✅ Model Saved Successfully"
+    )
+
+    print(
+        "\n📁 Saved To:"
+    )
+
+    print(
+        "models/best_student_model.pkl"
+    )
+
+    print(
+        "\n🎉 Day 6 Completed Successfully"
     )
 
 
