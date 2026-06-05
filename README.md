@@ -168,4 +168,40 @@ models/best_student_model.pkl
 ---
 
 
+## 📅 Day 6: Feature Engineering & Hyperparameter Tuning
+
+### 🎯 Objective
+Improve model performance using full-feature training, hyperparameter optimization, and feature importance analysis.
+
+---
+
+### ✅ Work Completed
+
+- Expanded feature set beyond basic academic attributes
+- Applied one-hot encoding to categorical variables
+- Implemented hyperparameter tuning using GridSearchCV
+- Optimized Random Forest model
+- Generated feature importance rankings
+- Identified top predictors of student performance
+
+---
+
+### 📊 Techniques Used
+
+- Feature Engineering
+- One-Hot Encoding
+- GridSearchCV
+- Random Forest Regression
+- Feature Importance Analysis
+
+---
+
+### 🧠 Key Learnings
+
+- Impact of feature selection on model performance
+- Hyperparameter optimization workflows
+- Model interpretability using feature importance
+
+---
+
 
