@@ -203,5 +203,32 @@ Improve model performance using full-feature training, hyperparameter optimizati
 - Model interpretability using feature importance
 
 ---
+## 📅 Day 7: Prediction Service Layer
+
+### 🎯 Objective
+Convert the trained machine learning model into a reusable prediction service.
+
+### ✅ Work Completed
+
+- Created model loading module
+- Built prediction pipeline
+- Developed service layer
+- Enabled real-time grade prediction
+- Tested prediction using trained model
+
+### 📁 New Files Added
+
+pipelines/predict_pipeline.py
+
+src/models/predict.py
+
+src/services/prediction_service.py
+
+### 🧠 Key Learnings
+
+- Model serving fundamentals
+- Loading models with Joblib
+- Building reusable prediction functions
+- Separating training and prediction workflows
 
 
