@@ -231,4 +231,158 @@ src/services/prediction_service.py
 - Building reusable prediction functions
 - Separating training and prediction workflows
 
+## 📅 Day 8: FastAPI Backend Development
+
+### 🎯 Objective
+
+Expose the machine learning model through REST API endpoints using FastAPI.
+
+---
+
+### ✅ Work Completed
+
+- Installed FastAPI framework
+- Created API request schema using Pydantic
+- Built FastAPI application
+- Implemented health check endpoint
+- Implemented prediction endpoint
+- Connected API with trained ML model
+
+---
+
+### 📁 New Files Added
+
+src/api/app.py
+
+src/api/schema.py
+
+---
+
+### 🌐 API Endpoints
+
+GET /
+
+Returns API status message.
+
+GET /health
+
+Returns system health status.
+
+POST /predict
+
+Accepts student attributes and returns predicted grade.
+
+---
+
+### Example Request
+
+{
+    "studytime": 4,
+    "failures": 0,
+    "absences": 2
+}
+
+### Example Response
+
+{
+    "predicted_grade": 15.3
+}
+
+---
+
+### 🧠 Key Learnings
+
+- FastAPI fundamentals
+- REST API development
+- Request validation using Pydantic
+- Integrating ML models with APIs
+
+---
+
+## 📅 Day 9: API Validation, Logging & Testing
+
+### 🎯 Objective
+
+Enhance API reliability through validation, logging, and testing.
+
+---
+
+### ✅ Work Completed
+
+- Added input validation using Pydantic
+- Implemented API request logging
+- Added exception handling
+- Enabled automatic API documentation
+- Created API testing module
+
+---
+
+### 📁 New Files Added
+
+src/api/logger.py
+
+tests/test_api.py
+
+---
+
+### 🌐 API Features
+
+- Request Validation
+- Error Handling
+- Logging
+- Interactive Documentation
+- Automated Testing
+
+---
+
+### 🧠 Key Learnings
+
+- Production API practices
+- Logging and monitoring
+- Validation using Pydantic
+- API testing fundamentals
+
+---
+
+## 📅 Day 10: Streamlit Dashboard
+
+### 🎯 Objective
+
+Build a user-friendly web interface for grade prediction.
+
+---
+
+### ✅ Work Completed
+
+- Created Streamlit dashboard
+- Added interactive sliders
+- Connected dashboard to prediction service
+- Displayed prediction results in real time
+
+---
+
+### 📁 New Files Added
+
+dashboard/app.py
+
+---
+
+### 🖥️ Dashboard Features
+
+- Study Time Input
+- Failures Input
+- Absences Input
+- Predict Button
+- Instant Grade Prediction
+
+---
+
+### 🧠 Key Learnings
+
+- Streamlit fundamentals
+- Building ML dashboards
+- Frontend integration with ML models
+- Interactive user interfaces
+
+---
 
